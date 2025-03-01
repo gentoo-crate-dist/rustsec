@@ -12,7 +12,8 @@
         contents: write
       steps:
         - name: Update mirror
-          uses: projg2/crate-dist-mirror-action@v3
+          uses: projg2/crate-dist-mirror-action@v2
           with:
             ssh-private-key: ${{ secrets.ssh_key }}
             directories: cargo-audit
+            tag-filter: rustsec/*
